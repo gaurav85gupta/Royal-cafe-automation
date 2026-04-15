@@ -1020,7 +1020,7 @@ async function loadSettings() {
   try {
     console.log("loadSettings chal raha hai");
 
-    const res = await fetch("http://localhost:3000/get-settings");
+    const res = await fetch(fetch("https://YOUR-RAILWAY-URL.up.railway.app/get-settings"));
     const data = await res.json();
 
     if (!data) {
