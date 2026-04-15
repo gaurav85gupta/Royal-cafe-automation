@@ -1020,7 +1020,7 @@ async function loadSettings() {
   try {
     console.log("loadSettings chal raha hai");
 
-    const res = await fetch(fetch("backend-production-9e15.up.railway.app"));
+   const res = await fetch("https://backend-production-9e15.up.railway.app/get-settings");
     const data = await res.json();
 
     if (!data) {
@@ -1047,7 +1047,7 @@ async function loadSettings() {
 document.addEventListener("DOMContentLoaded", loadSettings);
 
 
-window.onload = loadSettings;
+
 
 let allOrders = [];
 let currentFilter = 'all';
@@ -1057,7 +1057,7 @@ let autoRefreshInterval = null;
 function doLogin() {
   const u = document.getElementById('login-user').value.trim();
   const p = document.getElementById('login-pass').value.trim();
- if (u === "admin" && p === "admin123") {
+if (u === CONFIG.username && p === CONFIG.password) {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     loadOrders();
