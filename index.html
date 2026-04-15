@@ -1057,7 +1057,7 @@ let autoRefreshInterval = null;
 function doLogin() {
   const u = document.getElementById('login-user').value.trim();
   const p = document.getElementById('login-pass').value.trim();
-  if (u === CONFIG.username && p === CONFIG.password) {
+ if (u === "admin" && p === "admin123") {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     loadOrders();
