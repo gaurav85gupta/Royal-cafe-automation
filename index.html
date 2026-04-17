@@ -26,7 +26,7 @@
     --glow: 0 0 40px rgba(245,166,35,0.08);
     --shadow-card: 0 4px 24px rgba(0,0,0,0.5);
   }
-
+ 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: 'Outfit', sans-serif;
@@ -34,7 +34,7 @@ body {
   color: var(--text);
   min-height: 100vh;
 }
-
+ 
 /* Animated gradient glow */
 body::before {
   content: '';
@@ -61,23 +61,23 @@ body::before {
       radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,166,35,0.08) 0%, transparent 60%),
       url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Ccircle cx='30' cy='30' r='0.5' fill='rgba(245,166,35,0.15)'/%3E%3C/svg%3E");
   }
-
+ 
   .login-wrap {
     width: 90%;
     max-width: 400px;
     animation: riseIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
-
+ 
   @keyframes riseIn {
     from { opacity: 0; transform: translateY(32px) scale(0.97); }
     to   { opacity: 1; transform: translateY(0) scale(1); }
   }
-
+ 
   .login-crest {
     text-align: center;
     margin-bottom: 36px;
   }
-
+ 
   .crest-icon {
     width: 72px;
     height: 72px;
@@ -90,7 +90,7 @@ body::before {
     margin-bottom: 16px;
     box-shadow: 0 8px 32px rgba(245,166,35,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
   }
-
+ 
   .login-crest h1 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 32px;
@@ -98,7 +98,7 @@ body::before {
     color: var(--text);
     letter-spacing: 0.5px;
   }
-
+ 
   .login-crest span {
     font-size: 12px;
     color: var(--text-dim);
@@ -107,7 +107,7 @@ body::before {
     display: block;
     margin-top: 4px;
   }
-
+ 
   .login-card {
     background: var(--surface);
     border: 1px solid var(--edge);
@@ -115,7 +115,7 @@ body::before {
     padding: 36px 32px;
     box-shadow: var(--shadow-card), 0 0 0 1px rgba(245,166,35,0.05);
   }
-
+ 
   .field-label {
     font-size: 11px;
     font-weight: 600;
@@ -125,7 +125,7 @@ body::before {
     display: block;
     margin-bottom: 8px;
   }
-
+ 
   .login-input {
     width: 100%;
     background: var(--surface2);
@@ -139,14 +139,14 @@ body::before {
     margin-bottom: 20px;
     transition: border-color 0.25s, box-shadow 0.25s;
   }
-
+ 
   .login-input::placeholder { color: var(--text-dim); }
-
+ 
   .login-input:focus {
     border-color: var(--amber);
     box-shadow: 0 0 0 3px rgba(245,166,35,0.1);
   }
-
+ 
   .login-btn {
     width: 100%;
     background: linear-gradient(135deg, var(--amber) 0%, #E8930A 100%);
@@ -163,14 +163,14 @@ body::before {
     box-shadow: 0 4px 16px rgba(245,166,35,0.35);
     margin-top: 4px;
   }
-
+ 
   .login-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 8px 24px rgba(245,166,35,0.5);
   }
-
+ 
   .login-btn:active { transform: scale(0.98); }
-
+ 
   .login-error {
     color: #FF6B6B;
     font-size: 13px;
@@ -182,12 +182,12 @@ body::before {
     border-radius: 8px;
     padding: 10px;
   }
-
+ 
   /* ═══════════════════════════════════
      MAIN APP
   ═══════════════════════════════════ */
   #app { display: none; position: relative; z-index: 1; }
-
+ 
   /* ── HEADER ── */
   .header {
     background: rgba(14,17,24,0.95);
@@ -202,13 +202,13 @@ body::before {
     top: 0;
     z-index: 100;
   }
-
+ 
   .header-brand {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-
+ 
   .brand-badge {
     width: 34px;
     height: 34px;
@@ -220,7 +220,7 @@ body::before {
     font-size: 16px;
     flex-shrink: 0;
   }
-
+ 
   .brand-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
@@ -228,7 +228,7 @@ body::before {
     color: var(--text);
     letter-spacing: 0.3px;
   }
-
+ 
   .brand-sub {
     font-size: 10px;
     color: var(--text-dim);
@@ -238,13 +238,13 @@ body::before {
     line-height: 1;
     margin-top: 1px;
   }
-
+ 
   .header-right {
     display: flex;
     align-items: center;
     gap: 12px;
   }
-
+ 
   .live-chip {
     display: flex;
     align-items: center;
@@ -259,19 +259,19 @@ body::before {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-
+ 
   .live-dot {
     width: 6px; height: 6px;
     background: var(--emerald);
     border-radius: 50%;
     animation: heartbeat 1.5s ease-in-out infinite;
   }
-
+ 
   @keyframes heartbeat {
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.4); opacity: 0.6; }
   }
-
+ 
   .logout-btn {
     background: transparent;
     border: 1px solid var(--edge);
@@ -285,13 +285,13 @@ body::before {
     transition: all 0.2s;
     letter-spacing: 0.5px;
   }
-
+ 
   .logout-btn:hover {
     border-color: rgba(192,57,43,0.5);
     color: #FF6B6B;
     background: rgba(192,57,43,0.06);
   }
-
+ 
   /* ── STATS BAR ── */
   .stats-bar {
     display: grid;
@@ -300,11 +300,11 @@ body::before {
     background: var(--edge);
     border-bottom: 1px solid var(--edge);
   }
-
+ 
   @media (max-width: 640px) {
     .stats-bar { grid-template-columns: repeat(2, 1fr); }
   }
-
+ 
   .stat-tile {
     background: var(--surface);
     padding: 20px 24px;
@@ -312,7 +312,7 @@ body::before {
     overflow: hidden;
     transition: background 0.2s;
   }
-
+ 
   .stat-tile::after {
     content: '';
     position: absolute;
@@ -323,10 +323,10 @@ body::before {
     transform: scaleX(0);
     transition: transform 0.3s;
   }
-
+ 
   .stat-tile:hover { background: var(--surface2); }
   .stat-tile:hover::after { transform: scaleX(1); }
-
+ 
   .stat-tag {
     font-size: 10px;
     font-weight: 600;
@@ -335,7 +335,7 @@ body::before {
     color: var(--text-dim);
     margin-bottom: 8px;
   }
-
+ 
   .stat-num {
     font-family: 'Cormorant Garamond', serif;
     font-size: 36px;
@@ -344,9 +344,9 @@ body::before {
     color: var(--text);
     transition: color 0.2s;
   }
-
+ 
   .stat-tile:hover .stat-num { color: var(--amber); }
-
+ 
   .stat-icon {
     position: absolute;
     right: 20px;
@@ -355,7 +355,7 @@ body::before {
     font-size: 28px;
     opacity: 0.07;
   }
-
+ 
   /* ── TABS ── */
   .nav-tabs {
     background: var(--surface);
@@ -366,9 +366,9 @@ body::before {
     overflow-x: auto;
     scrollbar-width: none;
   }
-
+ 
   .nav-tabs::-webkit-scrollbar { display: none; }
-
+ 
   .tab {
     padding: 14px 20px;
     font-size: 13px;
@@ -386,26 +386,26 @@ body::before {
     align-items: center;
     gap: 8px;
   }
-
+ 
   .tab-icon { font-size: 14px; }
-
+ 
   .tab.active {
     color: var(--amber);
     border-bottom-color: var(--amber);
   }
-
+ 
   .tab:hover:not(.active) { color: var(--text-mid); }
-
+ 
   /* ── MAIN CONTENT ── */
   .main {
     padding: 28px;
     max-width: 1280px;
     margin: 0 auto;
   }
-
+ 
   .tab-content { display: none; }
   .tab-content.active { display: block; }
-
+ 
   /* ── FILTER ROW ── */
   .filter-row {
     display: flex;
@@ -414,7 +414,7 @@ body::before {
     margin-bottom: 24px;
     flex-wrap: wrap;
   }
-
+ 
   .filter-chip {
     background: var(--surface2);
     border: 1px solid var(--edge);
@@ -428,14 +428,14 @@ body::before {
     font-family: 'Outfit', sans-serif;
     transition: all 0.2s;
   }
-
+ 
   .filter-chip.active,
   .filter-chip:hover {
     background: var(--amber-glow);
     border-color: var(--edge-amber);
     color: var(--amber);
   }
-
+ 
   .refresh-chip {
     margin-left: auto;
     background: var(--surface2);
@@ -452,24 +452,24 @@ body::before {
     align-items: center;
     gap: 6px;
   }
-
+ 
   .refresh-chip:hover {
     border-color: var(--edge-amber);
     color: var(--amber);
   }
-
+ 
   /* ── ORDERS GRID ── */
   .orders-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     gap: 16px;
   }
-
+ 
   @media (max-width: 380px) {
     .orders-grid { grid-template-columns: 1fr; }
     .main { padding: 16px; }
   }
-
+ 
   /* ── ORDER CARD ── */
 .order-card {
   background: rgba(255,255,255,0.03);
@@ -478,45 +478,56 @@ body::before {
   border-radius: 16px;
   transition: all 0.3s ease;
 }
-
+ 
   @keyframes cardIn {
     from { opacity: 0; transform: translateY(16px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
+ 
   .order-card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
 }
-
+ 
   .card-stripe {
     height: 3px;
     width: 100%;
   }
-
+ 
   .card-stripe.pending  { background: linear-gradient(90deg, #F5A623, #F5A62388); }
   .card-stripe.confirmed { background: linear-gradient(90deg, #00C897, #00C89788); }
   .card-stripe.paid     { background: linear-gradient(90deg, #4A90E2, #4A90E288); }
   .card-stripe.cancelled { background: linear-gradient(90deg, #C0392B, #C0392B88); }
-
+ 
   .card-body { padding: 18px 20px 20px; }
-
+ 
   .card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 12px;
   }
-
+ 
   .order-id {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--text-dim);
-    font-family: 'Outfit', sans-serif;
+    letter-spacing: 1px;
+    color: var(--amber);
+    font-family: 'Outfit', monospace;
+    background: rgba(245,166,35,0.08);
+    border: 1px solid rgba(245,166,35,0.18);
+    border-radius: 6px;
+    padding: 3px 9px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
   }
-
+ 
+  .order-id-icon {
+    font-size: 10px;
+    opacity: 0.7;
+  }
+ 
   .status-pill {
     padding: 3px 10px;
     border-radius: 6px;
@@ -525,12 +536,12 @@ body::before {
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-
+ 
   .status-pill.pending   { background: rgba(245,166,35,0.12); color: var(--amber); border: 1px solid rgba(245,166,35,0.2); }
   .status-pill.confirmed { background: rgba(0,200,151,0.1); color: var(--emerald); border: 1px solid rgba(0,200,151,0.2); }
   .status-pill.paid      { background: rgba(74,144,226,0.1); color: var(--sapphire); border: 1px solid rgba(74,144,226,0.2); }
   .status-pill.cancelled { background: rgba(192,57,43,0.1); color: #FF6B6B; border: 1px solid rgba(192,57,43,0.2); }
-
+ 
   .order-food {
     font-size: 15px;
     font-weight: 600;
@@ -538,16 +549,16 @@ body::before {
     margin-bottom: 14px;
     line-height: 1.4;
   }
-
+ 
   .order-meta {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     margin-bottom: 16px;
   }
-
+ 
   .meta-item {}
-
+ 
   .meta-key {
     font-size: 9px;
     font-weight: 700;
@@ -556,13 +567,13 @@ body::before {
     color: var(--text-dim);
     margin-bottom: 3px;
   }
-
+ 
   .meta-val {
     font-size: 13px;
     font-weight: 500;
     color: var(--text-mid);
   }
-
+ 
   .card-footer {
     background: var(--surface2);
     border-top: 1px solid var(--edge);
@@ -571,7 +582,7 @@ body::before {
     align-items: center;
     justify-content: space-between;
   }
-
+ 
   .total-tag {
     font-size: 10px;
     font-weight: 700;
@@ -579,7 +590,7 @@ body::before {
     text-transform: uppercase;
     color: var(--text-dim);
   }
-
+ 
   .total-amt {
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
@@ -587,7 +598,7 @@ body::before {
     color: var(--amber);
     letter-spacing: 0.5px;
   }
-
+ 
   .card-actions {
     display: flex;
     gap: 8px;
@@ -595,7 +606,7 @@ body::before {
     background: var(--surface2);
     border-top: 1px solid var(--edge);
   }
-
+ 
   .btn-confirm {
     flex: 1;
     background: rgba(0,200,151,0.15);
@@ -610,13 +621,13 @@ body::before {
     cursor: pointer;
     transition: all 0.2s;
   }
-
+ 
   .btn-confirm:hover {
     background: rgba(0,200,151,0.25);
     box-shadow: 0 4px 16px rgba(0,200,151,0.15);
     transform: translateY(-1px);
   }
-
+ 
   .btn-paid {
     flex: 1;
     background: rgba(74,144,226,0.12);
@@ -631,12 +642,12 @@ body::before {
     cursor: pointer;
     transition: all 0.2s;
   }
-
+ 
   .btn-paid:hover {
     background: rgba(74,144,226,0.22);
     transform: translateY(-1px);
   }
-
+ 
   .btn-cancel {
     background: transparent;
     color: var(--text-dim);
@@ -649,27 +660,27 @@ body::before {
     transition: all 0.2s;
     line-height: 1;
   }
-
+ 
   .btn-cancel:hover {
     background: rgba(192,57,43,0.1);
     border-color: rgba(192,57,43,0.3);
     color: #FF6B6B;
   }
-
+ 
   /* ── EMPTY STATE ── */
   .empty-state {
     text-align: center;
     padding: 80px 24px;
     color: var(--text-dim);
   }
-
+ 
   .empty-icon {
     font-size: 52px;
     display: block;
     margin-bottom: 16px;
     opacity: 0.5;
   }
-
+ 
   .empty-state h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
@@ -677,16 +688,16 @@ body::before {
     margin-bottom: 8px;
     font-weight: 600;
   }
-
+ 
   .empty-state p { font-size: 14px; }
-
+ 
   /* ── LOADING ── */
   .loading {
     text-align: center;
     padding: 80px 24px;
     color: var(--text-dim);
   }
-
+ 
   .spinner {
     width: 32px;
     height: 32px;
@@ -696,9 +707,9 @@ body::before {
     animation: spin 0.7s linear infinite;
     margin: 0 auto 16px;
   }
-
+ 
   @keyframes spin { to { transform: rotate(360deg); } }
-
+ 
   /* ── SETTINGS ── */
   .settings-grid {
     display: grid;
@@ -706,18 +717,18 @@ body::before {
     gap: 20px;
     max-width: 900px;
   }
-
+ 
   @media (max-width: 640px) {
     .settings-grid { grid-template-columns: 1fr; }
   }
-
+ 
   .settings-card {
     background: var(--surface);
     border: 1px solid var(--edge);
     border-radius: var(--radius);
     padding: 28px;
   }
-
+ 
   .settings-card h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 18px;
@@ -728,14 +739,14 @@ body::before {
     align-items: center;
     gap: 10px;
   }
-
+ 
   .settings-card h3::after {
     content: '';
     flex: 1;
     height: 1px;
     background: var(--edge);
   }
-
+ 
   .settings-input {
     width: 100%;
     background: var(--surface2);
@@ -749,14 +760,14 @@ body::before {
     margin-bottom: 14px;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
-
+ 
   .settings-input::placeholder { color: var(--text-dim); }
-
+ 
   .settings-input:focus {
     border-color: var(--amber);
     box-shadow: 0 0 0 3px rgba(245,166,35,0.08);
   }
-
+ 
   .settings-label {
     font-size: 10px;
     font-weight: 700;
@@ -766,7 +777,7 @@ body::before {
     display: block;
     margin-bottom: 6px;
   }
-
+ 
   .save-btn {
     background: linear-gradient(135deg, var(--amber), #E8930A);
     color: #0A0800;
@@ -781,18 +792,18 @@ body::before {
     letter-spacing: 0.5px;
     box-shadow: 0 4px 16px rgba(245,166,35,0.25);
   }
-
+ 
   .save-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 24px rgba(245,166,35,0.4);
   }
-
+ 
   .info-steps {
     font-size: 13px;
     color: var(--text-mid);
     line-height: 2;
   }
-
+ 
   .info-steps code {
     background: var(--surface3);
     padding: 2px 8px;
@@ -801,7 +812,7 @@ body::before {
     color: var(--amber);
     font-family: 'Courier New', monospace;
   }
-
+ 
   /* ── TOAST ── */
   .toast {
     position: fixed;
@@ -820,11 +831,11 @@ body::before {
     backdrop-filter: blur(12px);
     letter-spacing: 0.3px;
   }
-
+ 
   .toast.show { transform: translateX(-50%) translateY(0); }
   .toast.success { border-color: rgba(0,200,151,0.4); color: var(--emerald); }
   .toast.error   { border-color: rgba(192,57,43,0.4); color: #FF6B6B; }
-
+ 
   /* ── SECTION TITLE ── */
   .section-title {
     font-family: 'Cormorant Garamond', serif;
@@ -836,7 +847,7 @@ body::before {
     align-items: center;
     gap: 12px;
   }
-
+ 
   .section-title::before {
     content: '';
     width: 3px;
@@ -847,7 +858,7 @@ body::before {
 </style>
 </head>
 <body>
-
+ 
 <!-- ══════════════════════════════
      LOGIN SCREEN
 ══════════════════════════════ -->
@@ -868,12 +879,12 @@ body::before {
     </div>
   </div>
 </div>
-
+ 
 <!-- ══════════════════════════════
      MAIN APP
 ══════════════════════════════ -->
 <div id="app">
-
+ 
   <!-- HEADER -->
   <div class="header">
     <div class="header-brand">
@@ -891,7 +902,7 @@ body::before {
       <button class="logout-btn" onclick="logout()">Sign Out</button>
     </div>
   </div>
-
+ 
   <!-- STATS -->
   <div class="stats-bar">
     <div class="stat-tile">
@@ -915,14 +926,14 @@ body::before {
       <div class="stat-icon">✅</div>
     </div>
   </div>
-
+ 
   <!-- TABS -->
   <div class="nav-tabs">
     <button class="tab active" onclick="switchTab('orders', this)">
       <span class="tab-icon">📋</span> All Orders
     </button>
     <button class="tab" onclick="switchTab('pending', this)">
-      <span class="tab-icon">🟡</span> Pending
+      <span class="tab-icon">🟡</span> Pending & Confirmed
     </button>
     <button class="tab" onclick="switchTab('online', this)">
       <span class="tab-icon">💳</span> Online Payment
@@ -931,10 +942,10 @@ body::before {
       <span class="tab-icon">⚙️</span> Settings
     </button>
   </div>
-
+ 
   <!-- CONTENT -->
   <div class="main">
-
+ 
     <!-- ALL ORDERS -->
     <div class="tab-content active" id="tab-orders">
       <div class="filter-row">
@@ -949,18 +960,18 @@ body::before {
         <div class="loading"><div class="spinner"></div>Loading orders…</div>
       </div>
     </div>
-
+ 
     <!-- PENDING -->
     <div class="tab-content" id="tab-pending">
       <div class="filter-row">
-        <div class="section-title">Pending Orders</div>
+        <div class="section-title">Pending &amp; Confirmed Orders</div>
         <button class="refresh-chip" style="margin-left:auto" onclick="loadOrders()">↻ Refresh</button>
       </div>
       <div id="pending-container">
         <div class="loading"><div class="spinner"></div>Loading…</div>
       </div>
     </div>
-
+ 
     <!-- ONLINE PAYMENT -->
     <div class="tab-content" id="tab-online">
       <div class="filter-row">
@@ -971,7 +982,7 @@ body::before {
         <div class="loading"><div class="spinner"></div>Loading…</div>
       </div>
     </div>
-
+ 
     <!-- SETTINGS -->
     <div class="tab-content" id="tab-settings">
       <div class="section-title" style="margin-bottom:24px">Configuration</div>
@@ -988,7 +999,7 @@ body::before {
           <input type="password" class="settings-input" id="set-password" placeholder="Leave blank to keep current" />
           <button class="save-btn" onclick="saveSettings()">Save Settings</button>
         </div>
-
+ 
         <div class="settings-card">
           <h3>📋 Setup Guide</h3>
           <div class="info-steps">
@@ -1002,32 +1013,32 @@ body::before {
         </div>
       </div>
     </div>
-
+ 
   </div>
 </div>
-
+ 
 <!-- TOAST -->
 <div class="toast" id="toast"></div>
-
+ 
 <script>
-
-
+ 
+ 
 // ─── CONFIG ───────────────────────────────
 let CONFIG = {};
-
+ 
 // ─── LOAD SETTINGS FROM BACKEND ───────────
 async function loadSettings() {
   try {
     console.log("loadSettings chal raha hai");
-
+ 
    const res = await fetch("https://backend-production-9e15.up.railway.app/get-settings");
     const data = await res.json();
-
+ 
     if (!data) {
       console.error("No settings found in DB");
       return;
     }
-
+ 
     CONFIG = {
       sheetId: data.sheetId,
       apiKey: data.apiKey,
@@ -1035,24 +1046,24 @@ async function loadSettings() {
       username: "admin",
       password: "admin123"
     };
-
+ 
     console.log("Loaded CONFIG:", CONFIG);
-
+ 
   } catch (err) {
     console.error("Error loading settings:", err);
   }
 }
-
+ 
 // ─── PAGE LOAD ────────────────────────────
 document.addEventListener("DOMContentLoaded", loadSettings);
-
-
-
-
+ 
+ 
+ 
+ 
 let allOrders = [];
 let currentFilter = 'all';
 let autoRefreshInterval = null;
-
+ 
 // ─── LOGIN ────────────────────────────────
 function doLogin() {
   const u = document.getElementById('login-user').value.trim();
@@ -1069,11 +1080,11 @@ if (u === CONFIG.username && p === CONFIG.password) {
     setTimeout(() => err.style.animation = '', 10);
   }
 }
-
+ 
 document.getElementById('login-pass').addEventListener('keydown', e => {
   if (e.key === 'Enter') doLogin();
 });
-
+ 
 function logout() {
   clearInterval(autoRefreshInterval);
   document.getElementById('login-screen').style.display = 'flex';
@@ -1081,12 +1092,12 @@ function logout() {
   document.getElementById('login-user').value = '';
   document.getElementById('login-pass').value = '';
 }
-
+ 
 // ─── AUTO REFRESH ─────────────────────────
 function startAutoRefresh() {
   autoRefreshInterval = setInterval(loadOrders, 30000);
 }
-
+ 
 // ─── TABS ─────────────────────────────────
 function switchTab(tab, btn) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
@@ -1094,12 +1105,12 @@ function switchTab(tab, btn) {
   btn.classList.add('active');
   document.getElementById('tab-' + tab).classList.add('active');
 }
-
+ 
 // ─── LOAD ORDERS ──────────────────────────
 async function loadOrders() {
   const range = 'Sheet1!A:J';
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${CONFIG.sheetId}/values/${range}?key=${CONFIG.apiKey}`;
-
+ 
   try {
     if (!CONFIG.apiKey) { renderDemo(); return; }
     const res = await fetch(url);
@@ -1118,43 +1129,51 @@ async function loadOrders() {
     renderDemo();
   }
 }
-
+ 
 // ─── DEMO DATA ────────────────────────────
 function renderDemo() {
   allOrders = [
     { _row: 2, name: 'Gaurav', contact: '919506788059', 'table number': '5', food: 'Paneer Butter Masala (Full) × 2', 'order id': '1776007122530', total_bill: '560', 'payment status': 'Pending', 'payment method': 'Online', 'transition id': 'NA' },
-    { _row: 3, name: 'Rahul', contact: '919876543210', 'table number': 'Takeaway', food: 'Chicken Biryani × 1', 'order id': '1776007200000', total_bill: '320', 'payment status': 'Confirmed', 'payment method': 'Cash', 'transition id': 'NA' },
-    { _row: 4, name: 'Priya', contact: '919123456789', 'table number': '3', food: 'Veg Thali × 2', 'order id': '1776007300000', total_bill: '598', 'payment status': 'Paid', 'payment method': 'Online', 'transition id': 'TXN123456' },
-    { _row: 5, name: 'Amit', contact: '919988776655', 'table number': '8', food: 'Butter Chicken × 1, Garlic Naan × 4', 'order id': '1776007400000', total_bill: '700', 'payment status': 'Pending', 'payment method': 'Cash', 'transition id': 'NA' },
+    { _row: 3, name: 'Rahul', contact: '919876543210', 'table number': 'Takeaway', food: 'Chicken Biryani × 1', 'order id': '1776007200000', total_bill: '320', 'payment status': 'Pending', 'payment method': 'Cash', 'transition id': 'NA' },
+    { _row: 4, name: 'Priya', contact: '919123456789', 'table number': '3', food: 'Veg Thali × 2', 'order id': '1776007300000', total_bill: '598', 'payment status': 'Confirmed', 'payment method': 'Cash', 'transition id': 'NA' },
+    { _row: 5, name: 'Amit', contact: '919988776655', 'table number': '8', food: 'Butter Chicken × 1, Garlic Naan × 4', 'order id': '1776007400000', total_bill: '700', 'payment status': 'Confirmed', 'payment method': 'Online', 'transition id': 'TXN98765' },
+    { _row: 6, name: 'Sneha', contact: '919911223344', 'table number': '2', food: 'Dal Makhani × 1, Tandoori Roti × 4', 'order id': '1776007500000', total_bill: '380', 'payment status': 'Paid', 'payment method': 'Online', 'transition id': 'TXN123456' },
   ];
   renderAll();
   updateStats();
   showToast('Demo mode — Add API key in Settings to connect real data', 'error');
 }
-
+ 
 // ─── RENDER ───────────────────────────────
 function renderAll() {
   renderContainer('orders-container', allOrders, currentFilter);
-  renderContainer('pending-container', allOrders, 'Pending');
-  renderContainer('online-container', allOrders.filter(o =>
-    (o['payment method'] || '').toLowerCase() === 'online' &&
-    (o['payment status'] || '').toLowerCase() === 'pending'
-  ), 'all');
+  // Pending tab: show Pending AND Confirmed (both need admin action)
+  const actionNeeded = allOrders.filter(o =>
+    ['pending','confirmed'].includes((o['payment status'] || '').toLowerCase())
+  );
+  renderContainer('pending-container', actionNeeded, 'all');
+  // Online tab: online orders that are Pending or Confirmed (payment not yet marked paid)
+  const onlineUnpaid = allOrders.filter(o => {
+    const method = (o['payment method'] || '').toLowerCase();
+    const status = (o['payment status'] || '').toLowerCase();
+    return method === 'online' && ['pending','confirmed'].includes(status);
+  });
+  renderContainer('online-container', onlineUnpaid, 'all');
 }
-
+ 
 function filterOrders(filter, btn) {
   currentFilter = filter;
   document.querySelectorAll('.filter-chip').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
   renderContainer('orders-container', allOrders, filter);
 }
-
+ 
 function renderContainer(containerId, orders, filter) {
   const container = document.getElementById(containerId);
   let filtered = filter === 'all'
     ? orders
     : orders.filter(o => (o['payment status'] || '').toLowerCase() === filter.toLowerCase());
-
+ 
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="empty-state">
@@ -1164,37 +1183,58 @@ function renderContainer(containerId, orders, filter) {
       </div>`;
     return;
   }
-
+ 
   container.innerHTML = `<div class="orders-grid">${filtered.map(renderCard).join('')}</div>`;
 }
-
+ 
 function renderCard(order) {
   const status = (order['payment status'] || 'pending').toLowerCase();
   const payment = (order['payment method'] || '').toLowerCase();
   const orderId = order['order id'] || order['order_id'] || '';
-  const shortId = orderId ? '#' + orderId.toString().slice(-6) : '#------';
+  // Show full Order ID — never generate a fake one
+  const displayId = orderId ? 'Order ID: ' + orderId.toString() : 'No ID';
   const total = order['total_bill'] || order['total bill'] || '—';
   const table = order['table number'] || '—';
   const isPending = status === 'pending';
-
+  const isConfirmed = status === 'confirmed';
+  const txnId = order['transition id'] || order['transaction id'] || '';
+ 
   let actions = '';
+ 
   if (isPending) {
+    // Pending → show Confirm + Mark as Paid (for ALL payment methods) + Cancel
     const safeFood = (order.food || '').replace(/'/g, "\\'");
     const safeName = (order.name || '').replace(/'/g, "\\'");
     actions = `
       <div class="card-actions">
-        <button class="btn-confirm" onclick="confirmOrder('${order._row}','${order.contact}','${safeName}','${safeFood}','${table}','${orderId}')">✓ Confirm</button>
-        ${payment === 'online' ? `<button class="btn-paid" onclick="markPaid('${order._row}','${order.contact}','${safeName}','${orderId}')">💳 Mark Paid</button>` : ''}
-        <button class="btn-cancel" onclick="cancelOrder('${order._row}','${orderId}')">✕</button>
+        <button class="btn-confirm" onclick="confirmOrder('${order._row}','${order.contact}','${safeName}','${safeFood}','${table}','${orderId}')">✓ Confirm Order</button>
+        <button class="btn-paid" onclick="markPaid('${order._row}','${order.contact}','${safeName}','${orderId}')">💳 Mark as Paid</button>
+        <button class="btn-cancel" onclick="cancelOrder('${order._row}','${orderId}')" title="Cancel Order">✕</button>
+      </div>`;
+  } else if (isConfirmed) {
+    // Confirmed → only Mark as Paid remains (cash was received / online to verify)
+    const safeName = (order.name || '').replace(/'/g, "\\'");
+    actions = `
+      <div class="card-actions">
+        <button class="btn-paid" style="flex:2" onclick="markPaid('${order._row}','${order.contact}','${safeName}','${orderId}')">💳 Mark as Paid</button>
+        <button class="btn-cancel" onclick="cancelOrder('${order._row}','${orderId}')" title="Cancel Order">✕</button>
       </div>`;
   }
-
+ 
+  // Transaction ID row (show for online orders that have a txn ID)
+  const txnRow = (payment === 'online' && txnId && txnId !== 'NA')
+    ? `<div class="meta-item" style="grid-column:1/-1">
+         <div class="meta-key">Transaction ID</div>
+         <div class="meta-val" style="color:var(--sapphire);font-family:monospace">${txnId}</div>
+       </div>`
+    : '';
+ 
   return `
     <div class="order-card ${status}">
       <div class="card-stripe ${status}"></div>
       <div class="card-body">
         <div class="card-top">
-          <div class="order-id">${shortId}</div>
+          <div class="order-id"><span class="order-id-icon">🔖</span>${displayId}</div>
           <div class="status-pill ${status}">${order['payment status'] || 'Pending'}</div>
         </div>
         <div class="order-food">${order.food || '—'}</div>
@@ -1204,17 +1244,18 @@ function renderCard(order) {
             <div class="meta-val">${order.name || '—'}</div>
           </div>
           <div class="meta-item">
-            <div class="meta-key">Table</div>
+            <div class="meta-key">Table / Type</div>
             <div class="meta-val">${table}</div>
           </div>
           <div class="meta-item">
-            <div class="meta-key">Payment</div>
+            <div class="meta-key">Payment Method</div>
             <div class="meta-val">${order['payment method'] || '—'}</div>
           </div>
           <div class="meta-item">
             <div class="meta-key">Contact</div>
             <div class="meta-val">${order.contact || '—'}</div>
           </div>
+          ${txnRow}
         </div>
       </div>
       <div class="card-footer">
@@ -1224,21 +1265,21 @@ function renderCard(order) {
       ${actions}
     </div>`;
 }
-
+ 
 // ─── STATS ────────────────────────────────
 function updateStats() {
   const pending   = allOrders.filter(o => (o['payment status'] || '').toLowerCase() === 'pending').length;
-  const confirmed = allOrders.filter(o => ['confirmed','paid'].includes((o['payment status'] || '').toLowerCase())).length;
+  const confirmed = allOrders.filter(o => (o['payment status'] || '').toLowerCase() === 'confirmed').length;
   const revenue   = allOrders
-    .filter(o => ['confirmed','paid'].includes((o['payment status'] || '').toLowerCase()))
+    .filter(o => (o['payment status'] || '').toLowerCase() === 'paid')
     .reduce((s, o) => s + parseFloat((o['total_bill'] || o['total bill'] || '0').toString().replace(/[^\d.]/g,'') || 0), 0);
-
+ 
   document.getElementById('stat-total').textContent     = allOrders.length;
   document.getElementById('stat-pending').textContent   = pending;
   document.getElementById('stat-confirmed').textContent = confirmed;
   document.getElementById('stat-revenue').textContent   = '₹' + revenue.toFixed(0);
 }
-
+ 
 // ─── ACTIONS ──────────────────────────────
 async function confirmOrder(row, phone, name, food, table, orderId) {
   try {
@@ -1252,15 +1293,21 @@ async function confirmOrder(row, phone, name, food, table, orderId) {
     setTimeout(loadOrders, 1500);
   } catch(e) { showToast('⚠ Error: ' + e.message, 'error'); }
 }
-
+ 
 async function markPaid(row, phone, name, orderId) {
   try {
+    // Fire n8n webhook so WhatsApp receipt / sheet update is triggered
+    await fetch(CONFIG.n8nUrl + '/webhook/mark-paid', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ phone, name, row, orderId })
+    }).catch(() => {}); // non-blocking — continue even if webhook unreachable
     await updateOrderStatus(row, orderId, 'Paid');
     showToast('💳 Marked as Paid for ' + name, 'success');
     setTimeout(loadOrders, 1500);
   } catch(e) { showToast('⚠ Error: ' + e.message, 'error'); }
 }
-
+ 
 async function cancelOrder(row, orderId) {
   if (!confirm('Cancel this order?')) return;
   try {
@@ -1269,7 +1316,7 @@ async function cancelOrder(row, orderId) {
     setTimeout(loadOrders, 1000);
   } catch(e) { showToast('⚠ Error: ' + e.message, 'error'); }
 }
-
+ 
 async function updateOrderStatus(row, orderId, status) {
   const res = await fetch(CONFIG.n8nUrl + '/webhook/update-order-status', {
     method: 'POST',
@@ -1278,7 +1325,7 @@ async function updateOrderStatus(row, orderId, status) {
   });
   if (!res.ok) throw new Error('Webhook returned ' + res.status);
 }
-
+ 
 // ─── SETTINGS ─────────────────────────────
 function saveSettings() {
   CONFIG.apiKey  = document.getElementById('set-apikey').value.trim();
@@ -1286,22 +1333,22 @@ function saveSettings() {
   CONFIG.n8nUrl  = document.getElementById('set-n8nurl').value.trim();
   const newPass  = document.getElementById('set-password').value.trim();
   if (newPass) CONFIG.password = newPass;
-
+ 
   localStorage.setItem('rc_apikey',   CONFIG.apiKey);
   localStorage.setItem('rc_sheetid',  CONFIG.sheetId);
   localStorage.setItem('rc_n8nurl',   CONFIG.n8nUrl);
   localStorage.setItem('rc_password', CONFIG.password);
-
+ 
   showToast('✓ Settings saved', 'success');
   setTimeout(loadOrders, 500);
 }
-
+ 
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('set-apikey').value  = CONFIG.apiKey;
   document.getElementById('set-sheetid').value = CONFIG.sheetId;
   document.getElementById('set-n8nurl').value  = CONFIG.n8nUrl;
 });
-
+ 
 // ─── TOAST ────────────────────────────────
 function showToast(msg, type = 'success') {
   const t = document.getElementById('toast');
@@ -1312,3 +1359,5 @@ function showToast(msg, type = 'success') {
 </script>
 </body>
 </html>
+ 
+
