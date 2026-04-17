@@ -1245,7 +1245,7 @@ async function confirmOrder(row, phone, name, food, table, orderId) {
     await fetch(CONFIG.n8nUrl + '/webhook/cash-confirm', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ phone, name, food, table, row })
+      body: JSON.stringify({ phone, name, food, table, row, orderId })
     });
     await updateOrderStatus(row, orderId, 'Confirmed');
     showToast('✓ Order confirmed — WhatsApp sent to ' + name, 'success');
